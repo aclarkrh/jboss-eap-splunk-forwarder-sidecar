@@ -99,6 +99,12 @@
                 <overflow-action value="block"/>
                 <subhandlers>
                     <handler name="CONSOLE"/>
+                </subhandlers>
+            </async-handler>
+            <async-handler name="ASYNC_SIZE_ROTATING">
+                <queue-length value="512"/>
+                <overflow-action value="block"/>
+                <subhandlers>
                     <handler name="SIZE_ROTATING"/>
                 </subhandlers>
             </async-handler>
@@ -115,6 +121,7 @@
                 <level name="INFO"/>
                 <handlers>
                     <handler name="ASYNC"/>
+                    <handler name="ASYNC_SIZE_ROTATING"/>
                 </handlers>
             </root-logger>
             <formatter name="OPENSHIFT">
