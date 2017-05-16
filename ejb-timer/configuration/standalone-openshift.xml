@@ -92,7 +92,7 @@
                 </formatter>
             </console-handler>
             <size-rotating-file-handler name="SIZE_ROTATING">
-                <file path="/opt/eap/standalone/log/server.log"/>
+                <file path="/var/log/eap/server.log"/>
             </size-rotating-file-handler>
             <async-handler name="ASYNC">
                 <queue-length value="512"/>
