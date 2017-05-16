@@ -3,8 +3,10 @@ FROM centos:latest
 WORKDIR /tmp
 
 RUN yum update -y && yum install -y wget && yum clean all
+RUN wget -O splunkforwarder-6.6.0-1c4f3bbe1aea-linux-2.6-x86_64.rpm 'https://download.splunk.com/products/universalforwarder/releases/6.6.0/linux/splunkforwarder-6.6.0-1c4f3bbe1aea-linux-2.6-x86_64.rpm' && rpm -ihv splunkforwarder-6.6.0-1c4f3bbe1aea-linux-2.6-x86_64.rpm && rm splunkforwarder-6.6.0-1c4f3bbe1aea-linux-2.6-x86_64.rpm
 
-RUN wget -O splunkforwarder-6.5.1-f74036626f0c-linux-2.6-x86_64.rpm 'https://www.splunk.com/bin/splunk/DownloadActivityServlet?architecture=x86_64&platform=linux&version=6.5.1&product=universalforwarder&filename=splunkforwarder-6.5.1-f74036626f0c-linux-2.6-x86_64.rpm&wget=true' && rpm -ihv splunkforwarder-6.5.1-f74036626f0c-linux-2.6-x86_64.rpm && rm splunkforwarder-6.5.1-f74036626f0c-linux-2.6-x86_64.rpm
+RUN chgrp -R 0 /opt/splunkforwarder \
+  && chmod -R g+rwX /opt/splunkforwarder
 
 WORKDIR /opt/splunkforwarder/bin/
 
