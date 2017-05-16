@@ -115,7 +115,6 @@
                 <level name="INFO"/>
                 <handlers>
                     <handler name="ASYNC"/>
-                    <handler name="ASYNC_SIZE_ROTATING"/>
                 </handlers>
             </root-logger>
             <formatter name="OPENSHIFT">
