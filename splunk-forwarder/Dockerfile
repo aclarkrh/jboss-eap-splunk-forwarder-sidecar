@@ -8,7 +8,7 @@ RUN wget -O splunkforwarder-6.6.0-1c4f3bbe1aea-linux-2.6-x86_64.rpm 'https://dow
 RUN chgrp -R 0 /opt/splunkforwarder \
   && chmod -R g+rwX /opt/splunkforwarder
 
-RUN mkdir /.splunk
+RUN mkdir /.splunk \
   && chgrp -R 0 /.splunk \
   && chmod -R g+rwX /.splunk
 
