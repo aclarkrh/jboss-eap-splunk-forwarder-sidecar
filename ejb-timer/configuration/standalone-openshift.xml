@@ -99,12 +99,6 @@
                 <overflow-action value="block"/>
                 <subhandlers>
                     <handler name="CONSOLE"/>
-                </subhandlers>
-            </async-handler>
-            <async-handler name="ASYNC_SIZE_ROTATING">
-                <queue-length value="512"/>
-                <overflow-action value="block"/>
-                <subhandlers>
                     <handler name="SIZE_ROTATING"/>
                 </subhandlers>
             </async-handler>
