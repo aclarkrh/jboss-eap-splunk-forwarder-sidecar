@@ -10,6 +10,8 @@ else
   exit 1
 fi
 
+sleep infinity
+
 /opt/splunkforwarder/bin/splunk add forward-server $SPLUNK_SERVER -auth admin:admin
 if [ $? -eq 0 ]
 then
