@@ -93,6 +93,9 @@
             </console-handler>
             <size-rotating-file-handler name="SIZE_ROTATING">
                 <file path="/var/log/eap/server.log"/>
+                <formatter>
+                    <named-formatter name="COLOR-PATTERN"/>
+                </formatter>
             </size-rotating-file-handler>
             <async-handler name="ASYNC">
                 <queue-length value="512"/>
