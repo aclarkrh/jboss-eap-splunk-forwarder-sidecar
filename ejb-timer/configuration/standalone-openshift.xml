@@ -120,6 +120,7 @@
                     <handler name="ASYNC"/>
                 </handlers>
             </root-logger>
+<!--
             <formatter name="OPENSHIFT">
                 <custom-formatter module="org.jboss.logmanager.ext" class="org.jboss.logmanager.ext.formatters.LogstashFormatter">
                     <properties>
@@ -127,6 +128,7 @@
                     </properties>
                 </custom-formatter>
             </formatter>
+-->
             <formatter name="COLOR-PATTERN">
                 <pattern-formatter pattern="%K{level}%d{HH:mm:ss,SSS} %-5p [%c] (%t) %s%e%n"/>
             </formatter>
