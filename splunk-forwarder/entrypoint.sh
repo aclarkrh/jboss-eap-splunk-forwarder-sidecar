@@ -1,4 +1,7 @@
 #!/bin/sh  
+
+echo "_meta = ocp-namespace::$OCP_NAMESPACE" >> /opt/splunkforwarder/etc/system/local/inputs.conf
+
 echo "Pushing from $SPLUNK_MONITOR_LOCN to $SPLUNK_SERVER" 
 
 /opt/splunkforwarder/bin/splunk start --accept-license
