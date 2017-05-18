@@ -10,9 +10,7 @@ else
   exit 1
 fi
 
-sleep infinity
-
-/opt/splunkforwarder/bin/splunk add forward-server $SPLUNK_SERVER -auth admin:admin
+/opt/splunkforwarder/bin/splunk add forward-server $SPLUNK_SERVER -auth $SPLUNK_USERNAME:$SPLUNK_PASSWORD
 if [ $? -eq 0 ]
 then
   echo "Successfully registered with splunk remote instance "
