@@ -146,6 +146,14 @@
                 </formatter>
                 <file relative-to="jboss.server.log.dir" path="server.log"/>
             </size-rotating-file-handler>
+            <async-handler name="ASYNC">
+                <queue-length value="512"/>
+                <overflow-action value="block"/>
+                <subhandlers>
+                    <handler name="CONSOLE"/>
+                    <handler name="FILE"/>
+                </subhandlers>
+            </async-handler>
             <logger category="com.arjuna">
                 <level name="WARN"/>
             </logger>
@@ -158,8 +166,7 @@
             <root-logger>
                 <level name="INFO"/>
                 <handlers>
-                    <handler name="CONSOLE"/>
-                    <handler name="FILE"/>
+                    <handler name="ASYNC"/>
                 </handlers>
             </root-logger>
             <formatter name="OPENSHIFT">
