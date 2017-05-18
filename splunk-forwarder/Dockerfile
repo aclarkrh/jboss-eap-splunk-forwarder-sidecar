@@ -17,9 +17,4 @@ WORKDIR /opt/splunkforwarder/bin/
 COPY entrypoint.sh /sbin/entrypoint.sh
 RUN chmod +x /sbin/entrypoint.sh
 
-#RUN mkdir -p /tmp/splunk/
-#RUN chmod a+rw /tmp/splunk
-#ENV SPLUNK_SERVER=
-#ENV SPLUNK_MONITOR_LOCN=/tmp
-
 ENTRYPOINT ["/sbin/entrypoint.sh"]
