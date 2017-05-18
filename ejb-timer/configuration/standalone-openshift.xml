@@ -151,7 +151,6 @@
                 <overflow-action value="block"/>
                 <subhandlers>
                     <handler name="CONSOLE"/>
-                    <handler name="FILE"/>
                 </subhandlers>
             </async-handler>
             <logger category="com.arjuna">
@@ -167,6 +166,7 @@
                 <level name="INFO"/>
                 <handlers>
                     <handler name="ASYNC"/>
+                    <handler name="FILE"/>
                 </handlers>
             </root-logger>
             <formatter name="OPENSHIFT">
