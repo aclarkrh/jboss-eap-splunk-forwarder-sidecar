@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: BuildConfig
+metadata:
+  labels:
+    app: ejb-timer
+  name: ejb-timer
+spec:
+  output:
+    to:
+      kind: ImageStreamTag
+      name: ejb-timer:latest
+  source:
+    contextDir: ejb-timer
+    git:
+      ref: master
+      uri: https://github.com/aclarkrh/jboss-eap-splunk-forwarder-sidecar.git
+    type: Git
+  strategy:
+    sourceStrategy:
+      from:
+        kind: ImageStreamTag
+        name: jboss-eap70-openshift:1.4
+        namespace: openshift
+    type: Source
+  triggers:
+  - type: ConfigChange
