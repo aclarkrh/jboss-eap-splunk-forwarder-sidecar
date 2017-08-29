@@ -12,7 +12,7 @@ spec:
     resources: {}
     rollingParams:
       intervalSeconds: 1
-      maxSurge: 25%
+      maxSurge: 26%
       maxUnavailable: 25%
       timeoutSeconds: 600
       updatePeriodSeconds: 1
